@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+
+
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- en h1 där title visas-->
+        <h1>{{ title }}</h1>
+        <!-- en knapp som räknar upp antal med 1 då den klickas på -->
+        <button v-on:click="clickit(1)">click me</button>
+        <h3>Clicks = {{click}}</h3>
+        <!-- en p som visar resultatet av 100 * 100 -->
+        <p>100 * 100 = {{ 100 * 100}}</p>
+        <!-- en p som visar ett slumptal mellan 0 och 100 -->
+        <h1 v-once>{{ slumptal() }}</h1>
+        <!-- en p som visar 10 slumptal mellan 0 och 100 på en rad med space mellan -->
+        <h1 v-once>{{ slumptals() }} {{ slumptalsnr}} </h1>
+        <!-- en länk till Google -->
+        <a v-bind:href="link">Google</a>
+        <!-- en input(text) som när du skriver i den uppdaterar title för varje keydown -->
+        <input type="text" v-on:keydown="uptext">
+        <!-- en länk med v-bind som initialt pekar mot yahoo -->
+        <a v-bind:href="linky">{{ linkn }}</a>
+        <!-- en input(text) som uppdaterar länken ovan då du trycker Enter när du skrivit klart-->
+        <input type="link" v-on:keyup.enter="uplink()">
+        <!-- en bild som byter till en annan bild då du klickar på den, den ska toggla mellan två bilder-->
+        <img :src='imgsrc1' @click="imgchange()">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

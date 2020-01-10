@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-once> {{ greet }} {{todaysNumber()}} </h1>
+        <button v-on:click="increaselick(1)">click me</button>
+        <button v-on:click="increaselick(2)">More</button>
+        <h3>Clicks = {{click}}</h3>
+        <h3 v-on:mousemove="reppos">jaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas</h3>
+        <h4> x= {{x}} Y= {{y}} </h4>
+        <input type="text" v-on:keyup="uptext">
+        <h1>{{ message}} <br></h1>
+
+    </div>
+    <script src="demo1.js"></script>
+</body>
+
+</html>
