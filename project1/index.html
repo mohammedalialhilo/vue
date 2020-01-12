@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>Namn</p>
+        <input type="text" v-on:keyup.enter="angenamn()">
+        <button v-on:click="create()">Generate New Character</button>
+        <div class="str">
+            <p>Current bonus points {{ bonus }}</p>
+            <p>Str: {{ strpoints }}</p>
+            <button v-on:click="strpointsclick()"> + </button>
+        </div>
+        <div class="Int">
+            <p>Int: {{ Intpoints }}</p>
+            <button v-on:click="intpointsclick()"> + </button>
+        </div>
+        <div class="Dex">
+            <p>Dex: {{ Dexpoints }}</p>
+            <button v-on:click="dexpointsclick()"> + </button>
+        </div>
+        <div class="svar">
+            <p>Name: {{ Namn }}</p>
+            <table>
+                <tr>
+                  <th>Charecter Stats</th>
+                </tr>
+                <tr>
+                  <td>Str</td>
+                  <td>{{ strstatus }}</td>
+                </tr>
+                <tr>
+                    <td>Int</td>
+                    <td>{{ Intstatus }}</td>
+                </tr>
+                <tr>
+                    <td>Dex</td>
+                    <td>{{ Dexstatus }}</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <script src="indes.js"></script>
+</body>
+
+</html>
