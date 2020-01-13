@@ -1,0 +1,64 @@
+.points {
+    text-align: center;
+    border: 3px solid grey;
+    padding: 1rem;
+    font-weight: bold;
+    width: 140%;
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgba(250, 250, 250, 0.473);
+}
+
+.svar {
+    text-align: center;
+    border: 3px solid grey;
+    padding: 1rem;
+    font-weight: bold;
+    width: 140%;
+    box-shadow: 2px 2px 1px 1px black;
+    background-color: rgba(250, 250, 250, 0.473);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-justify: auto;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.inf {
+    text-align: center;
+    border: 3px solid grey;
+    padding: 1rem;
+    font-weight: bold;
+    width: 140%;
+    box-shadow: 2px 2px 1px 1px black;
+    background-color: rgba(250, 250, 250, 0.473);
+}
+
+button {
+    margin-top: 1%;
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    background: rgba(250, 250, 250, 0.801);
+    transition-duration: 0.36s;
+}
+
+button:hover {
+    background: rgb(250, 250, 250);
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.extra {
+    text-align: center;
+    border: 3px solid grey;
+    padding: 1rem;
+    font-weight: bold;
+    width: 140%;
+    box-shadow: 2px 2px 1px 1px black;
+    background-color: rgba(250, 250, 250, 0.473);
+}
