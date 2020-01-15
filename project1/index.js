@@ -11,16 +11,22 @@ new Vue({
         Intstatus: 0,
         Dexstatus: 0,
         type: " ",
+        selected: undefined,
         yes: false,
         warr: false,
         rog: false,
         mage: false,
         extra: false,
-        reset: false
+        reset: false,
+        url: "world.html",
+        title: "",
+        loading: false
     },
     methods: {
 
         create() {
+            this.selected = undefined;
+
             this.Namn = event.target.value;
             this.type = " ";
             this.strstatus = 0;
@@ -66,6 +72,7 @@ new Vue({
             this.yes = false;
             this.extra = false;
             this.reset = false;
+            this.selected = undefined;
 
 
         },
@@ -149,6 +156,18 @@ new Vue({
                 this.bonus = "you have 0 points ";
                 this.reset = true;
             }
+        },
+        select(number) {
+            this.selected = undefined;
+            if (number == 1) {
+                this.selected = "Warrior";
+            } else if (number == 2) {
+                this.selected = "Rogue";
+            } else if (number == 3) {
+                this.selected = "Mage";
+            }
+            this.loading = true;
+
         }
     }
 });

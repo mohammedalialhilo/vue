@@ -18,8 +18,8 @@
     background-color: rgba(250, 250, 250, 0.473);
 }
 
-body {
-    min-height: 100vh;
+.body {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +27,7 @@ body {
     background: url(bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .inf {
@@ -61,4 +62,23 @@ button:hover {
     width: 140%;
     box-shadow: 2px 2px 1px 1px black;
     background-color: rgba(250, 250, 250, 0.473);
+}
+
+.loading {
+    text-align: center;
+    border: 3px solid grey;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 1px 1px black;
+    background-color: rgb(250, 250, 250);
+    z-index: 3;
+}
+
+#app {
+    z-index: -1;
 }
