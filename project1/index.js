@@ -18,8 +18,7 @@ new Vue({
         mage: false,
         extra: false,
         reset: false,
-        url: "world.html",
-        title: "",
+
         loading: false
     },
     methods: {
