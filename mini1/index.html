@@ -30,10 +30,11 @@
         <a v-bind:href="link">Google</a>
         <!-- en input(text) som när du skriver i den uppdaterar title för varje keydown -->
         <input type="text" v-on:keydown="uptext">
+
         <!-- en länk med v-bind som initialt pekar mot yahoo -->
         <a v-bind:href="linky">{{ linkn }}</a>
         <!-- en input(text) som uppdaterar länken ovan då du trycker Enter när du skrivit klart-->
-        <input type="link" v-on:keyup.enter="uplink()">
+        <input type="link" v-on:keydown.enter="uplink()">
         <!-- en bild som byter till en annan bild då du klickar på den, den ska toggla mellan två bilder-->
         <img :src='imgsrc1' @click="imgchange()">
 

@@ -11,61 +11,58 @@
     <script src="../../vue.min.js"></script>
 </head>
 
-<body class="body" v-on:load="load">
-
+<body class="body">
     <div id="app">
-        <div>
-            <div class="bg-image"></div>
-            <div class="inf">
-                <h1>Namn</h1>
-                <input type="text" v-on:keyup.enter="create"> <br>
-                <button v-on:click="create">Generate New Character</button>
-            </div>
-            <div class="points">
-                <p>Current bonus points {{ bonus }}</p> <br>
-                <p>Str: {{ strpoints }}</p>
-                <button v-on:click="strpointsclick()"> + </button> <br>
-
-                <p>Int: {{ intpoints }}</p>
-                <button v-on:click="intpointsclick()"> + </button><br>
-
-                <p>Dex: {{ dexpoints }}</p>
-                <button v-on:click="dexpointsclick()"> + </button><br>
-
-
-            </div>
-            <div v-show="yes" class="svar">
-                <h2>Name: {{ Namn }}</h2>
-                <table>
-                    <tr>
-                        <th>Charecter Stats</th>
-                    </tr>
-                    <tr>
-                        <td>Str</td>
-                        <td>{{ strstatus }}</td>
-                    </tr>
-                    <tr>
-                        <td>Int</td>
-                        <td>{{ Intstatus }}</td>
-                    </tr>
-                    <tr>
-                        <td>Dex</td>
-                        <td>{{ Dexstatus }}</td>
-                    </tr>
-                </table>
-                <h3>You can be {{ type }}</h3>
-            </div>
-            <div v-show="extra" class="extra">
-                <button v-show="warr" @click="select(1)">choose to be Warrior</button>
-                <button v-show="rog" @click="select(2)">choose to be Rogue</button>
-                <button v-show="mage" @click="select(3)">choose to be Mage</button><br>
-                <button v-show="reset" @click="resetpoints">Reset points!</button>
-            </div>
+        <div class="bg-image"></div>
+        <div class="inf">
+            <h1>Namn</h1>
+            <input type="text" v-on:keyup.enter="create"> <br>
+            <button v-on:click="create">Generate New Character</button>
         </div>
+
+        <div class="points">
+            <p>Current bonus points {{ bonus }}</p> <br>
+            <p>Str: {{ strpoints }}</p>
+            <button v-on:click="strpointsclick()"> + </button> <br>
+            <p>Int: {{ intpoints }}</p>
+            <button v-on:click="intpointsclick()"> + </button><br>
+            <p>Dex: {{ dexpoints }}</p>
+            <button v-on:click="dexpointsclick()"> + </button><br>
+        </div>
+
+        <div v-show="yes" class="svar">
+            <h2>Name: {{ Namn }}</h2>
+            <table>
+                <tr>
+                    <th>Charecter Stats</th>
+                </tr>
+                <tr>
+                    <td>Str</td>
+                    <td>{{ strstatus }}</td>
+                </tr>
+                <tr>
+                    <td>Int</td>
+                    <td>{{ Intstatus }}</td>
+                </tr>
+                <tr>
+                    <td>Dex</td>
+                    <td>{{ Dexstatus }}</td>
+                </tr>
+            </table>
+            <h3>You can be {{ type }}</h3>
+        </div>
+
+        <div v-show="extra" class="extra">
+            <button v-show="warr" @click="select(1)">choose to be Warrior</button>
+            <button v-show="rog" @click="select(2)">choose to be Rogue</button>
+            <button v-show="mage" @click="select(3)">choose to be Mage</button><br>
+            <button v-show="reset" @click="resetpoints">Reset points!</button>
+        </div>
+
         <div v-show="loading" class="loading">
             <h1>Welcome {{ Namn }}!</h1><br>
             <h3>You will join the world soon as {{ selected }} </h3><br>
-            <h5>Loading map</h5><br>
+            <h5>Loading map</h5>
             <img src="loader.gif" alt="loading bar">
         </div>
 

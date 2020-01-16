@@ -30,7 +30,7 @@ new Vue({
             this.linky = event.target.value;
             this.linkn = event.target.value;
         },
-        slumptals: function() {
+        slumptals() {
             var temparr = new Array();
             let nr = 0;
             for (i = 0; i < 10; i++) {
@@ -46,6 +46,7 @@ new Vue({
                 this.imgsrc1 = "Images/bcg-1.jpg";
 
                 this.imgcount++;
+
             } else if (this.imgcount === 1) {
 
                 this.imgsrc1 = "Images/bcg-2.jpg";

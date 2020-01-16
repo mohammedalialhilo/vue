@@ -28,15 +28,19 @@ new Vue({
 
             this.Namn = event.target.value;
             this.type = " ";
+            this.bonus = 5;
             this.strstatus = 0;
+            this.strpoints = 0;
             this.Intstatus = 0;
+            this.intpoints = 0;
             this.Dexstatus = 0;
-
+            this.dexpoints = 0;
+            this.warr = false;
+            this.mage = false;
+            this.rog = false;
             this.strstatus += Math.floor(Math.random() * 18) + 1;
             this.Intstatus += Math.floor(Math.random() * 18) + 1;
             this.Dexstatus += Math.floor(Math.random() * 18) + 1;
-
-            this.type = "";
             if (12 <= this.strstatus) {
                 this.type += "warrior" + " ";
                 this.warr = true;
@@ -72,8 +76,6 @@ new Vue({
             this.extra = false;
             this.reset = false;
             this.selected = undefined;
-
-
         },
         strpointsclick() {
 
